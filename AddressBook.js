@@ -107,11 +107,11 @@ class Contact {
   //UC3
   contactDetails(
     "Abhishek",
-    "Baghel",
+    "Sharma",
     "Home",
     "Uttar Pradesh",
-    "Agra",
-    "282006",
+    "Mathura",
+    "281406",
     "abhishek@gmail.com",
     "334545452525"
   );
@@ -154,5 +154,21 @@ class Contact {
           }
         }
       });
+    }
+  }
+  
+  //UC5
+  
+  //method to delete
+  function deleteContact(first_Name) {
+    if (addressBook.length == null) {
+      console.log("Add Contact In Address Book");
+    } else {
+      for (let i = 0; i < addressBook.length; i++) {
+        if (addressBook[i].firstName == first_Name) {
+          addressBook.splice(i, 1);
+          console.log("Contact Deleted Successfully");
+        }
+      }
     }
   }
